@@ -192,22 +192,6 @@
 
           <div class="row">
             <div
-              class="col-lg-4 col-md-6 d-flex align-items-stretch"
-              data-aos="zoom-in"
-              data-aos-delay="100"
-            >
-              <div class="icon-box">
-                <a href="http://www.queenexch.com/" target="_blank">
-                  <img
-                    src="assets/img/logo/queen.png"
-                    alt="QueenExch"
-                    class="img-fluid"
-                  />
-                </a>
-              </div>
-            </div>
-
-            <div
               class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0"
               data-aos="zoom-in"
               data-aos-delay="200"
@@ -217,9 +201,45 @@
                   <img
                     src="assets/img/logo/maxwin.png"
                     alt="MaxWin"
-                    class="img-fluid"
+                    class="img-fluid exchimg"
                   />
                 </a>
+                <br />
+                <br />
+                <div class="d-grid gap-2">
+                  <a
+                    href="http://wa.me/917096079011?text=Hi JP Online Entertainment I Want MaxWin ID"
+                    class="get-id-btn-exch scrollto"
+                  >
+                    Get Maxwin9 ID
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="col-lg-4 col-md-6 d-flex align-items-stretch"
+              data-aos="zoom-in"
+              data-aos-delay="100"
+            >
+              <div class="icon-box">
+                <a href="http://www.queenexch.com/" target="_blank">
+                  <img
+                    src="assets/img/logo/queen.png"
+                    alt="QueenExch"
+                    class="img-fluid exchimg"
+                  />
+                </a>
+                <br />
+                <br />
+                <div class="d-grid gap-2">
+                  <a
+                    href="http://wa.me/917096079011?text=Hi JP Online Entertainment I Want QueenExch ID"
+                    class="get-id-btn-exch scrollto"
+                  >
+                    Get QueenExch ID
+                  </a>
+                </div>
               </div>
             </div>
 
@@ -233,9 +253,19 @@
                   <img
                     src="assets/img/logo/diamond.png"
                     alt="Diamond"
-                    class="img-fluid"
+                    class="img-fluid exchimg"
                   />
                 </a>
+                <br />
+                <br />
+                <div class="d-grid gap-2">
+                  <a
+                    href="http://wa.me/917096079011?text=Hi JP Online Entertainment I Want Diamond Exch ID"
+                    class="get-id-btn-exch scrollto"
+                  >
+                    Get Diamond Exch ID
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -382,7 +412,7 @@
           <div class="row mt-5">
             <div class="col-lg-4">
               <div class="info">
-                <div class="address">
+                <!-- <div class="address">
                   <i class="bi bi-geo-alt"></i>
                   <h4>Location:</h4>
                   <p>XYZ, BIHAR, IN 801505</p>
@@ -392,7 +422,7 @@
                   <i class="bi bi-envelope"></i>
                   <h4>Email:</h4>
                   <p>JP@example.com</p>
-                </div>
+                </div> -->
 
                 <div class="phone">
                   <i class="bi bi-phone"></i>
@@ -403,19 +433,14 @@
             </div>
 
             <div class="col-lg-8 mt-5 mt-lg-0">
-              <form
-                action="forms/contact.php"
-                method="post"
-                role="form"
-                class="php-email-form"
-              >
+              <form class="php-email-form">
                 <div class="row">
                   <div class="col-md-6 form-group">
                     <input
                       type="text"
-                      name="firstname"
+                      name="Firstname"
                       class="form-control"
-                      id="name"
+                      id="firstname"
                       placeholder=" First Name"
                       required
                     />
@@ -424,8 +449,8 @@
                     <input
                       type="text"
                       class="form-control"
-                      name="lastname"
-                      id="email"
+                      name="Lastname"
+                      id="lastname"
                       placeholder="Last Name"
                       required
                     />
@@ -434,8 +459,8 @@
                     <input
                       type="tel"
                       class="form-control"
-                      name="number"
-                      id="number"
+                      name="Phone"
+                      id="phone"
                       placeholder="Mobile No."
                       required
                     />
@@ -444,42 +469,29 @@
                     <input
                       type="email"
                       class="form-control"
-                      name="email"
+                      name="Email"
                       id="email"
                       placeholder="Email Address"
                       required
                     />
                   </div>
                 </div>
-                <!-- <div class="form-group mt-3">
-                  <input
-                    type="text"
-                    class="form-control"
-                    name="subject"
-                    id="subject"
-                    placeholder="Subject"
-                    required
-                  />
-                </div>
-                 -->
+
                 <div class="form-group mt-3">
                   <textarea
                     class="form-control"
-                    name="message"
+                    name="Message"
                     rows="5"
                     placeholder="Message"
+                    id="message"
                     required
                   ></textarea>
                 </div>
-                <div class="my-3">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">
-                    Your message has been sent. Thank you!
-                  </div>
-                </div>
+
                 <div class="text-center">
-                  <button type="submit">Send Message</button>
+                  <button type="submit" onclick="gotowhatsapp()">
+                    Send Message
+                  </button>
                 </div>
               </form>
             </div>
@@ -488,6 +500,34 @@
       </section>
       <!-- End Contact Section -->
     </main>
+
+    <script>
+      function gotowhatsapp() {
+        var name = document.getElementById("firstname").value;
+        var name = document.getElementById("lastname").value;
+        var phone = document.getElementById("phone").value;
+        var email = document.getElementById("email").value;
+        var service = document.getElementById("message").value;
+
+        var url =
+          "https://wa.me/918434020961?text=" +
+          "Name: " +
+          firstname +
+          "%20" +
+          lastname +
+          "%0a" +
+          "Phone: " +
+          phone +
+          "%0a" +
+          "Email: " +
+          email +
+          "%0a" +
+          "Message: " +
+          message;
+
+        window.open(url, "_blank").focus();
+      }
+    </script>
 
     <!-- ======= Footer ======= -->
     <footer id="footer">
@@ -542,11 +582,11 @@
                 </li>
                 <li>
                   <i class="bx bx-chevron-right"></i>
-                  <a href="#">Casino </a>
+                  <a href="#">Tennis </a>
                 </li>
                 <li>
                   <i class="bx bx-chevron-right"></i>
-                  <a href="#">Dragon Tiger</a>
+                  <a href="#">Cassino</a>
                 </li>
                 <li>
                   <i class="bx bx-chevron-right"></i>
@@ -567,21 +607,27 @@
               </p>
 
               <p>
-                Adress xyz <br />
-                PIN, IN<br /><br />
                 <strong>Phone:</strong> +91 7096079011<br />
-                <strong>Email:</strong> info@example.com<br />
+                <br />
               </p>
               <div class="social-links mt-3">
                 <a
-                  href="http://wa.me/917096079011?text=Hi JP Online Entertainment I Want A new ID"
+                  href="http://wa.me/917096079011"
                   target="_blank"
                   class="twitter"
                   ><i class="bx bxl-whatsapp"></i
                 ></a>
-                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                <a
+                  href="https://www.instagram.com/jp_online_entertainment/?hl=en"
+                  class="instagram"
+                  target="_blank"
+                  ><i class="bx bxl-instagram"></i
+                ></a>
 
-                <a href="https://t.me/+5QvZVV5Cl4w0NDBl" class="google-plus"
+                <a
+                  href="https://t.me/+5QvZVV5Cl4w0NDBl"
+                  class="google-plus"
+                  target="_blank"
                   ><i class="bx bxl-telegram"></i
                 ></a>
               </div>
