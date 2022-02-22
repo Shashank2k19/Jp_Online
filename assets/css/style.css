@@ -552,6 +552,25 @@ section {
 }
 
 /*--------------------------------------------------------------
+# Deposit withdraw section
+--------------------------------------------------------------*/
+.rs {
+  color: #145c37;
+}
+.exchbtn {
+  background: #000000;
+  border: 0;
+  padding: 10px 24px;
+  color: #ffffff;
+  transition: 0.4s;
+  border-radius: 4px;
+}
+.exchbtn:hover {
+  background: #145c37;
+  color: #ffffff;
+}
+
+/*--------------------------------------------------------------
 # Contact
 --------------------------------------------------------------*/
 .contact .info {
